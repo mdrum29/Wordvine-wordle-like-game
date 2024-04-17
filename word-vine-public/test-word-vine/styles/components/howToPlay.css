@@ -1,0 +1,378 @@
+.howToPlay {
+    background-color: var(--clr-dark);
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    z-index: 999;
+    transition: ease-in 0.5s ease;
+  }
+
+  .innerHow {
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+    text-align: center;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  .how-header {
+    padding-top: 2rem;
+    color: var(--clr-light);
+    font-size: var(--size-3xl);
+    font-weight: 800;
+    letter-spacing: -.05rem;
+  }
+
+  .practice {
+    font-size: var(--size-3xl);
+    text-transform: uppercase;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    border-radius: 10%;
+    position: relative;
+    text-shadow: .5px .5px var(--text-shadow-color);
+    background-color: var(--clr-light)
+  }
+
+  #practice-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    flex-grow: 1;
+    grid-template-columns: repeat(6, var(--size-5xl));
+    grid-template-rows: repeat(3, var(--size-5xl));
+    gap: .25rem;
+    padding-top: var(--size-base);
+    padding-bottom: var(--size-xxs);
+    
+}
+
+.practice[data-state="correct"] {
+    background-color: var(--clr-vine);
+    color: var(--clr-light);
+  }
+
+.practice[data-state="disabled"] {
+    background-color: var(--clr-slate600);
+  }
+
+  .practice[data-state="starter"] {
+    color: var(--clr-vine);
+    background-color:  var(--clr-light);
+  }
+
+
+.play-btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.play-button{
+    font-weight: 600;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(
+        var(--hue, 347),
+        var(--saturation, 77%),
+        calc(var(--lightness-offset, 0%) + var(--lightness, 50%))
+    );
+    color: var(--clr-light);
+    fill: var(--clr-light);
+    text-transform: uppercase;
+    border-radius: .2em;
+    cursor: pointer;
+    user-select: none;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    padding-inline-start: .5rem;
+    padding-inline-end:  .5rem;   
+    font-size: var(--size-xl);
+
+    }
+
+.play-button:hover, .play-button:focus {
+    --lightness-offset: 10%;
+    }
+
+.rules {
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+
+.howToPlay.closed {
+    opacity: 0;
+    z-index: -2;
+  }
+
+  .practice.flip {
+    transform: rotateX(90deg);
+  }
+
+
+
+  /* xs */
+@media (min-width: 475px) {
+    .howToPlay {
+        background-color: var(--clr-dark);
+        opacity: 1;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: top;
+        justify-content: center;
+        z-index: 999;
+      }
+    
+      .innerHow {
+        background-color: var(--clr-dark);
+        color: var(--clr-light);
+        text-align: center;
+        box-sizing: border-box;
+        position: relative;
+      }
+    
+      .how-header {
+        padding-top: 2rem;
+        color: var(--clr-light);
+        font-size: var(--size-3xl);
+        font-weight: 800;
+        letter-spacing: -.05rem;
+      }
+    
+      .practice {
+        font-size: var(--size-2xl);
+        text-transform: uppercase;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        user-select: none;
+        border-radius: 10%;
+        position: relative;
+        text-shadow: .5px .5px var(--text-shadow-color);
+        background-color: var(--clr-light)
+      }
+    
+      #practice-grid {
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        flex-grow: 1;
+        grid-template-columns: repeat(6, var(--size-5xl));
+        grid-template-rows: repeat(3, var(--size-5xl));
+        gap: .25rem;
+        padding-top: var(--size-base);
+        padding-bottom: var(--size-xxs);
+        
+    }
+    .practice[data-state="prac-correct"] {
+        background-color: var(--clr-vine);
+        color: var(--clr-light);
+      }
+    
+    .practice[data-state="prac-disabled"] {
+        background-color: var(--clr-slate600);
+      }
+    
+    
+    .play-btn-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    .play-button{
+        font-weight: 600;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: hsl(
+            var(--hue, 347),
+            var(--saturation, 77%),
+            calc(var(--lightness-offset, 0%) + var(--lightness, 50%))
+        );
+        color: var(--clr-light);
+        fill: var(--clr-light);
+        text-transform: uppercase;
+        border-radius: .2em;
+        cursor: pointer;
+        user-select: none;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        padding-inline-start: .5rem;
+        padding-inline-end:  .5rem;   
+        font-size: var(--size-xl);
+    
+        }
+    
+    .play-button:hover, .play-button:focus {
+        --lightness-offset: 10%;
+        }
+    
+    .rules {
+        padding-right: 2rem;
+        padding-left: 2rem;
+    }
+}
+    /*  */
+/*  */
+/* sm */
+@media (min-width: 640px) {
+       
+      .how-header {
+        padding-top: 3rem;
+        font-size: var(--size-4xl);
+      }
+    
+      .practice {
+        font-size: var(--size-2xl);
+      }
+    
+      #practice-grid {
+        grid-template-columns: repeat(6, var(--size-6xl));
+        grid-template-rows: repeat(3, var(--size-6xl));
+        gap: .25rem;
+        padding-top: var(--size-lg);
+        padding-bottom: var(--size-sm);
+        
+    }
+
+    .play-button{
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        padding-inline-start: .5rem;
+        padding-inline-end:  .5rem;   
+        font-size: var(--size-xl);
+    
+        }
+    
+    .rules {
+        padding-right: 4rem;
+        padding-left: 4rem;
+        font-size: var(--size-xl);
+    }
+    }
+/*  */
+/*  */
+/* md */
+@media (min-width: 768px) {      
+    .how-header {
+      padding-top: 3rem;
+      font-size: var(--size-4xl);
+    }
+  
+    .practice {
+      font-size: var(--size-3xl);
+    }
+  
+    #practice-grid {
+      grid-template-columns: repeat(6, var(--size-6xl));
+      grid-template-rows: repeat(3, var(--size-6xl));
+      gap: .25rem;
+      padding-top: var(--size-lg);
+      padding-bottom: var(--size-sm);
+      
+  }
+
+  .play-button{
+      padding-top: .5rem;
+      padding-bottom: .5rem;
+      padding-inline-start: 1rem;
+      padding-inline-end:  1rem;   
+      font-size: var(--size-2xl);
+  
+      }
+  
+  .rules {
+      padding-right: 8rem;
+      padding-left: 8rem;
+      font-size: var(--size-2xl);
+  }}
+/*  */
+/* lg */
+@media (min-width: 1024px) {      
+    .how-header {
+      padding-top: 3rem;
+      font-size: var(--size-5xl);
+    }
+  
+    .practice {
+      font-size: var(--size-4xl);
+    }
+  
+    #practice-grid {
+      grid-template-columns: repeat(6, var(--size-7xl));
+      grid-template-rows: repeat(3, var(--size-7xl));
+      gap: .25rem;
+      padding-top: var(--size-lg);
+      padding-bottom: var(--size-sm);
+      
+  }
+
+  .play-button{
+      padding-top: .5rem;
+      padding-bottom: .5rem;
+      padding-inline-start: 1rem;
+      padding-inline-end:  1rem;   
+      font-size: var(--size-3xl);
+  
+      }
+  
+  .rules {
+      padding-right: 12rem;
+      padding-left: 12rem;
+      font-size: var(--size-3xl);
+  }}
+/*  */
+/* xl */
+/* @media (min-width: 1280px) {} */
+/*  */
+/* xxl */
+@media (min-width: 1536px) {  
+  .rules {
+    padding-right: 50rem;
+    padding-left: 50rem;
+    padding-inline-start: 1.5rem;
+    padding-inline-end:  1.5rem;   
+    font-size: var(--size-3xl);
+}}
+
+@keyframes popup {
+    0%{
+      transform: scale(1);
+    }
+    50%{
+      transform: scale(1.4);
+    }
+    60%{
+      transform: scale(1.1);
+    }
+    70%{
+      transform: scale(1.2);
+    }
+    80%{
+      transform: scale(1);
+    }
+    90%{
+      transform: scale(1.1);
+    }
+    100%{
+      transform: scale(1);
+    }
+  }

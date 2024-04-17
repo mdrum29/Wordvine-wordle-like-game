@@ -1,0 +1,101 @@
+#timer-container {
+    justify-content: space-evenly;
+    display:flex;
+    padding-left: var(--size-xxs);
+    padding-right: var(--size-xxs);
+
+  }
+
+  #guess-container {
+    justify-content: space-evenly;
+    display: flex;
+    padding-left: var(--size-xxs);
+    padding-right: var(--size-xxs);
+  }
+
+  #hint-container {
+    justify-content: space-evenly;
+    display: flex;
+    padding-left: var(--size-xxs);
+    padding-right: var(--size-xxs);
+  }
+
+  #scoreboard {
+    font-size: var(--size-base);
+    color: var(--clr-slate400);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+
+}
+
+
+/* xs */
+@media (min-width: 475px) {
+  #hint-container,
+  #guess-container,
+  #timer-container  {
+    padding-left: var(--size-base);
+    padding-right: var(--size-base);
+  }
+
+  #scoreboard {
+    font-size: var(--size-lg);
+}
+}
+    /*  */
+/*  */
+/* sm */
+ @media (min-width: 640px) {
+  #hint-container,
+  #guess-container,
+  #timer-container  {
+    padding-left: var(--size-lg);
+    padding-right: var(--size-lg);
+  }
+
+  #scoreboard {
+    font-size: var(--size-xl);
+}
+} 
+/*  */
+/*  */
+/* md */
+@media (min-width: 768px) {
+
+  #hint-container,
+  #guess-container,
+  #timer-container  {
+    padding-left: var(--size-sm);
+    padding-right: var(--size-sm);
+  }
+
+  #scoreboard {
+    font-size: var(--size-2xl);
+}
+
+}
+/*  */
+/* lg */
+/* @media (min-width: 1024px) {} */
+/*  */
+/* xl */
+@media (min-width: 1280px) {
+  #hint-container,
+  #guess-container,
+  #timer-container  {
+    padding-left: var(--size-base);
+    padding-right: var(--size-base);
+  }
+
+  #scoreboard {
+    font-size: var(--size-3xl);
+}
+
+}
+/*  */
+/* xxl */
+/* @media (min-width: 1536px) {} */

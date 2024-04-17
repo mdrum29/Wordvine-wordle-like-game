@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/grapes.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-NQJWS5SZ');</script>
+      <!-- End Google Tag Manager -->
+    <link href="https://api.fontshare.com/v2/css?f[]=general-sans@500,600,400,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@400&display=swap" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+    <meta property="og:site_name" content="WordVine" />
+    <meta property="og:title" content="WordVine - Race to Connect Words" />
+    <meta property="og:url" content="https://WordVine.games" />
+    <meta property="og:image" content="/grapes.svg" />
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E0RK6HGHB1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-E0RK6HGHB1');
+    </script>
+    <title>WordVine</title>
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NQJWS5SZ"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <!-- End Google Tag Manager (noscript) -->
+    <header class="header container">
+      <div data-alert-container class="alert-container"></div>
+      <nav>
+          <h2 class="header__title">WordVine</h2>
+          <hr>
+          <ul class="header__menu">
+          
+            <li class="header__link">
+              <a href="#">
+                <button data-stats class="header__stats">
+                  stats             
+                </button>
+              </a>
+            </li>
+            <li class="header__link">
+              <a href="#reminder">
+                <button data-reminder class="header__reminder">   
+                  reminder           
+                </button>
+              </a>
+            </li>
+            <li class="header__link">
+              <a href="#contact">
+                <button data-contact class="header__contact">
+                  contact
+                </button>
+              </a>
+            </li>
+            <li class="header__link">
+              <a href="#rules">
+                <button data-instructions class="header__rules">  
+                  rules                             
+                </button>
+              </a>
+            </li>
+          </ul>
+          <hr>
+      </nav>
+    </header>
+    <main>
+      <div class="container" id="scoreboard">
+
+        <div id="timer-container">
+            <div>Time:&nbsp; </div>
+            <div class= 'timer' id="timer">0</div>
+        </div>
+
+        <div id="guess-container">
+            <div>Guesses:&nbsp; </div>
+            <div class="guesses"  id="guessCounter" guess-counter>0</div>
+        </div>
+        
+          <div id="hint-container">
+            <div>Hints:&nbsp; </div>
+            <div class="hints"  id="hintCounter" guess-counter>0</div>
+          </div>
+
+    </div>
+      
+      <div data-guess-grid class="guess-grid container" id="guessgrid-container">
+          <div row="1" col="1" class="tile"></div>
+          <div row="1" col="2" class="tile"></div>
+          <div row="1" col="3" class="tile"></div>
+          <div row="1" col="4" class="tile"></div>
+          <div row="1" col="5" class="tile"></div>
+          <div row="1" col="6" class="tile"></div>
+      
+          <div row="2" col="1" class="tile"></div>
+          <div row="2" col="2" class="tile"></div>
+          <div row="2" col="3" class="tile"></div>
+          <div row="2" col="4" class="tile"></div>
+          <div row="2" col="5" class="tile"></div>
+          <div row="2" col="6" class="tile"></div>
+      
+          <div row="3" col="1" class="tile"></div>
+          <div row="3" col="2" class="tile"></div>
+          <div row="3" col="3" class="tile"></div>
+          <div row="3" col="4" class="tile"></div>
+          <div row="3" col="5" class="tile"></div>
+          <div row="3" col="6" class="tile"></div>
+      
+          <div row="4" col="1" class="tile"></div>
+          <div row="4" col="2" class="tile"></div>
+          <div row="4" col="3" class="tile"></div>
+          <div row="4" col="4" class="tile"></div>
+          <div row="4" col="5" class="tile"></div>
+          <div row="4" col="6" class="tile"></div>
+      
+          <div row="5" col="1" class="tile"></div>
+          <div row="5" col="2" class="tile"></div>
+          <div row="5" col="3" class="tile"></div>
+          <div row="5" col="4" class="tile"></div>
+          <div row="5" col="5" class="tile"></div>
+          <div row="5" col="6" class="tile"></div>
+      
+          <div row="6" col="1" class="tile"></div>
+          <div row="6" col="2" class="tile"></div>
+          <div row="6" col="3" class="tile"></div>
+          <div row="6" col="4" class="tile"></div>
+          <div row="6" col="5" class="tile"></div>
+          <div row="6" col="6" class="tile"></div>
+      </div>
+     
+      <div id="hint-button">
+        <button class="hint_button" data-help="help">Next Letter</button>
+      </div>
+
+ 
+      <div data-keyboard class='container' id="keyboard">
+        <button class="key" data-key="Q">Q</button>
+        <button class="key" data-key="W">W</button>
+        <button class="key" data-key="E">E</button>
+        <button class="key" data-key="R">R</button>
+        <button class="key" data-key="T">T</button>
+        <button class="key" data-key="Y">Y</button>
+        <button class="key" data-key="U">U</button>
+        <button class="key" data-key="I">I</button>
+        <button class="key" data-key="O">O</button>
+        <button class="key" data-key="P">P</button>
+        <div class="space"></div>
+        <button class="key" data-key="A">A</button>
+        <button class="key" data-key="S">S</button>
+        <button class="key" data-key="D">D</button>
+        <button class="key" data-key="F">F</button>
+        <button class="key" data-key="G">G</button>
+        <button class="key" data-key="H">H</button>
+        <button class="key" data-key="J">J</button>
+        <button class="key" data-key="K">K</button>
+        <button class="key" data-key="L">L</button>
+        <div class="space"></div>
+        <button data-enter class="key large">Enter</button>
+        <button class="key" data-key="Z">Z</button>
+        <button class="key" data-key="X">X</button>
+        <button class="key" data-key="C">C</button>
+        <button class="key" data-key="V">V</button>
+        <button class="key" data-key="B">B</button>
+        <button class="key" data-key="N">N</button>
+        <button class="key" data-key="M">M</button>
+        <button data-delete class="key large">Delete</button>
+      </div>
+
+      <!-- stats pop up modal -->
+      <div class="outer-stats-modal container1" id="outer-stats-modal">
+        <div class="container1 stats-modal">
+
+          <div class="stats-header container1">
+            <h2 class="stats__margin container1"></h2>
+            <h2 class="stats__head container1">STATISTICS</h2>
+            <h2 class="stats__close container1">
+              <a href="#">
+                <button data-close-stat-modal class="stats__pop__close">x</button>
+              </a>
+              </h2>
+          </div>
+
+          <div class="scores-container container1">
+            <div class="scores__streak container1">
+              <div data-streak-count class="scores__streak__num container1">1</div>
+              <div class="scores__streak__streak container1">Streak</div>
+            </div>
+
+            <div class="scores__best container1">
+                <div data-best-score class="scores__best__num container1">0</div>
+                <div class="scores__best__best container1">Best</div>
+            </div>
+
+            <div class="scores__avg container1">
+              <div data-avg-score class="scores__avg__num container1">0</div>
+              <div class="scores__avg__avg container1">Avg</div>
+            </div>
+            <div class="scores__avg container1">
+              <div data-last-score class="scores__last__num container1">0</div>
+              <div class="scores__last__last container1">Last</div>
+            </div>
+
+          </div>
+
+          <div class="graph-container container1">
+            <h3 class="graph__header container1">Last 10 Scores</h3>
+            <div class="graph__graph">
+              <canvas id="linechart" style="width:100%; height:100%;"></canvas>
+            </div>
+          </div>
+
+          <div class="share-countdown"> 
+          <div class="countdown">
+            <div class="countdown__header">Next WordVine:</div>
+            <div id="countdown-timer">00:00:00</div>
+          </div>
+
+          <div class="share-container">
+            <button data-share class="share-button">SHARE</button>
+          </div>
+        </div>
+
+        </div>
+      </div>
+      <!-- END stats pop up modal -->
+
+      <!-- How to play module -->
+      <div class="howToPlay closed" id="howToPlay">
+        <div class="innerHow">
+            <div class="how-header">
+              HOW TO PLAY
+            </div>
+            <br> 
+
+            <p class="rules">
+              <strong>Objective:</strong>
+              Construct a WordVine by connecting words commonly used together. You are racing against the clock but be cautious—each guess and hint deducts points.
+            </p>
+            <br> 
+            
+            <p class="rules">
+              Guess words that are <strong>3 to 6 letters</strong> that are commonly used with the word above. An example vine could go "BOOK" to "SHELF" to "LIFE".
+              Pop culture references are fair game.
+            </p>
+
+
+              <div class="practice-grid" id="practice-grid">
+                <div row="x" cols ='1' class="practice"></div>
+                <div row="x" cols ='2' class="practice"></div>
+                <div row="x" cols ='3' class="practice"></div>
+                <div row="x" cols ='4' class="practice"></div>
+                <div row="x" cols ='5' class="practice"></div>
+                <div row="x" cols ='6' class="practice"></div>
+
+                <div row="y" cols ='1' class="practice"></div>
+                <div row="y" cols ='2' class="practice"></div>
+                <div row="y" cols ='3' class="practice"></div>
+                <div row="y" cols ='4' class="practice"></div>
+                <div row="y" cols ='5' class="practice"></div>
+                <div row="y" cols ='6' class="practice"></div>
+
+                <div row="z" cols ='1' class="practice"></div>
+                <div row="z" cols ='2' class="practice"></div>
+                <div row="z" cols ='3' class="practice"></div>
+                <div row="z" cols ='4' class="practice"></div>
+                <div row="z" cols ='5' class="practice"></div>
+                <div row="z" cols ='6' class="practice"></div>
+              </div>
+            <br> 
+
+            <div class="play-btn-container">
+              <button data-play class="play-button">Play</button>
+            </div>
+        
+        </div>
+      </div>
+      <!-- END HOW TO PLAY MODAL -->
+
+      <!-- CONTACT ME MODAL -->
+      <div id="outer-contact" class="outer-contact">
+        <div class="inner-contact">
+          <h2 class="contact_close">
+            <a href="#">
+              <button data-close-contact-modal class="close_x">x</button>
+            </a>
+          </h2>
+          <h2 class="contact_head">Contact Me</h2>
+          
+          <p class="contact text">
+            <strong>What's on your mind?</strong>
+            <br> 
+          </p>
+          <form action="" class="contactme">
+            <input type="email" name="email" placeholder="Your Email" class="email-input contact-inputs" required>
+            <input type="text" name="name" placeholder="Your Name" class="name-input contact-inputs" required>
+            <textarea name="message" placeholder="Your Message" class="msg-input contact-inputs" required></textarea>
+          </form>
+            <div class="send-btn-container">
+              <button data-send-msg class="send-button">Send Message</button>
+            </div>
+        </div>
+      </div>
+      <!-- END CONTACT MODAL -->
+
+      <!-- REMINDER MODAL -->
+      <div id="outer-reminder" class="outer-reminder">
+        <div class="inner-reminder">
+          <h2 class="reminder-close">
+            <a href="#">
+              <button data-close-reminder-modal class="reminder_x">x</button>
+            </a>
+          </h2>
+          <h2 class="reminder_head">Alert Me</h2>
+          
+          <p class="reminder_text">
+            We will send an email
+            <br> 
+            reminder to play the daily <strong class="green">WordVine</strong>
+            
+          </p>
+          <form action="" class="reminder_form">
+            <input type="text" name="name" placeholder="Your Name" class="reminder-name-input reminder-inputs" required>
+            <input type="email" name="email" placeholder="Your Email" class="reminder-email-input reminder-inputs" required>
+          </form>
+            <div class="reminder-btn-container">
+              <button data-reminder-btn class="reminder-button">Remind Me</button>
+            </div>
+        </div>
+      </div>
+      <!-- END REMINDER MODAL -->
+
+    </main>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
